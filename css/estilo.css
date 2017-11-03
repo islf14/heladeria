@@ -34,6 +34,10 @@ header{
 h1{
     float: left;
 }
+h1 img{
+    background: #fff;
+    border-radius: 50%;
+}
 
 header .contenedor {
     display: table;
