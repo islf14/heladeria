@@ -1,0 +1,60 @@
+main{
+    margin-top: 60px;
+    height: 100%;
+    padding:0;
+    margin:00;
+    background: url("../img/12.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:40px;
+    width:100%;
+    background:#999;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.box{
+  position:absolute;
+  height:100%;
+  width:100%;
+  font-family:Helvetica;
+  color:#fff;
+  background:rgba(0,0,0,0.15);
+  padding:30px 0px;
+}
+.box h2{
+  text-align:center;
+  margin:30px 0;
+  font-size:30px;
+}
+.box input{
+  display:block;
+  width:300px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  border:0;
+}
+.login {
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:calc(50vh - 200px);
+    left:calc(50vw - 200px);
+    overflow:hidden;
+}
+.Caja{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+
+
+

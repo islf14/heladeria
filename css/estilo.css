@@ -51,6 +51,11 @@ section {
 #bienvenidos {
     text-align: center;
 }
+footer{
+    bottom:0px;
+       background:#999;
+
+}
 
 footer .contenedor {
     display: flex;
