@@ -1,7 +1,7 @@
 <?php
 	function conectar(){
 		$server="localhost";
-		$bd="comedor_unjbg";
+		$bd="heladeria";
 		$user="root";
 		$pass="123456";
 
