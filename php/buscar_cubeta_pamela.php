@@ -26,7 +26,7 @@
 		<title>INVENTARIO DE CUBETAS</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-		<link href="css/buscar_cub.css" rel="stylesheet">
+		<link href="../css/estilo_reg_emp.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	</head>
 	<body>
