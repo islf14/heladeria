@@ -6,7 +6,7 @@
 	}
 
 	include("conexion.php");
-		$con= conectar();	
+	$con= conectar();	
 	$checkemail= $con->query("SELECT * FROM inventario_cubeta WHERE sabor='$sabor'");
 	$check_mail=mysqli_num_rows($checkemail);
 		
@@ -17,7 +17,7 @@
 				//echo 'Se ha registrado con exito';
 				echo ' <script language="javascript">alert("Registrado con éxito");</script> ';
 				$con->close();
-				echo "<script>location.href='index.html'</script>";
+				echo "<script>location.href='../html/principal.html'</script>";
 			}			
 		
 

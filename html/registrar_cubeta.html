@@ -6,37 +6,39 @@
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
     <link rel="stylesheet" href="../css/sesion.css">
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
+    <link rel="stylesheet" href="../css/estilo_reg_emp.css">        
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.icon">        
 </head>
 <body>
 
     <header>
         <div class="contenedor">
             <h1 class="icon-guidedo"><a class="aaa" href="../index.html"><img src="../img/helado-icon.png" alt="" width="30px"></a><a class="aaa" href="principal.html">Venecia</a></h1>
-            &nbsp;
-            <a class="aaa" href="principal.html">'Administrador'</a>
+            &nbsp;<a class="aaa" href="principal.html">'Administrador'</a>            
             <input type="checkbox" id="menu-bar">
             <label class="icon-menu" for="menu-bar"></label>
             <nav class="menu">
                 <a href="principal.html" onclick="activa()">Inicio</a>
-                <a href="" onclick="activa()">Venta</a>
-                <a href="" onclick="activa()">Adm. Cubeta</a>
-                <a href="" onclick="activa()">Ingr. Envases</a>
-                <a href="registrar_cubeta.html" onclick="activa()">Nueva Cubeta</a>
-                <a href="" onclick="activa()">Nv. Sabor</a>
-                <a href="" onclick="activa()">Cliente</a>
+                <a href="registrar_cubeta.html" onclick="activa()">Registrar Cubeta</a>
+                <a href="#" onclick="activa()">Inventario</a>
                 <a href="registro_empleado.html" onclick="activa()">Empleado</a>
+                <a href="" onclick="activa()">no</a>
                 <a href="../index.html" onclick="activa()">Cerrar Sesión</a>
             </nav>
         </div>
     </header>
 
-
-
-    <div>
-        <p>lsdfjlsdfjsldkfjsdlfj</p>
-    </div>
+	<form action="../php/registro_cubeta.php" method="post" class="form-register" onSubmit="return validar();">
+		<h2 class="form_titulo">Nuevo sabor de cubeta</h2>
+		<div class="contenedor_inputs">
+			<!--<input type="text" id="codigo" name="codigo" placeholder="Codigo" class="input-100">-->
+			<input type="text" id="codigo" name="codigo" class="input-100" placeholder="Codigo">
+			<input type="text" id="sabor" name="sabor" placeholder="Sabor" class="input-100">
+			<input type="text" id="cantidad" name="cantidad" placeholder="Cantidad" class="input-100">
+			<input type="submit"  name="submit" value="Registar" class="btn-enviar">
+		</div>
+	</form>
+	<script type="text/javascript" src="validar-c.js"></script>
 
     <footer>
         <div class="contenedor">
