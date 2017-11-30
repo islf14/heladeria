@@ -1,0 +1,104 @@
+.main{
+    margin-top: 30px;
+    height: 100%;
+    padding:0;
+    margin:00;
+    background: url("../img/1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.box{
+    position:absolute;
+    height:100%;
+    width:100%;
+    font-family:Helvetica;
+    color:#fff;
+    background:rgba(0,0,0,0.15);
+    padding:20px 0px;
+  }
+  .box h2{
+    text-align:center;
+    margin:10px 0;
+    font-size:30px;
+  }
+  .box input, .box textarea{
+    display:block;
+    width:300px;
+    margin:20px auto;
+    padding:15px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    border:0;
+  }
+  
+  .login {
+      width:400px;
+      height:600px;
+      position:absolute;
+      top:calc(50vh - 300px);
+      left:calc(50vw - 200px);
+      overflow:hidden;
+  }
+  .Caja{
+      position:relative;
+      height:100vh;
+      overflow:hidden;
+  }
+  
+  input[type="submit"]{
+      margin-bottom: auto;
+      background:rgba(0, 0, 0, 0.658);
+      color: #fff;
+      border: none;
+  }
+  input[type="submit"]:hover{
+      background: #16083b;
+      cursor: pointer;
+  }
+
+
+
+/*
+  form {
+    width: 25%;
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+}
+
+label {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+}
+*/
+input, textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+input:focus{
+    border: 1px solid #c91212;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 50px;
+    max-height: 200px;
+}
+
+input[type="submit"]{
+    margin-bottom: auto;
+    background: #1668C4;
+    color: #fff;
+    border: none;
+}
+
+input[type="submit"]:hover{
+    background: #4110c6;
+    cursor: pointer;
+}

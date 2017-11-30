@@ -8,16 +8,7 @@ main{
     background-attachment: fixed;
     background-position: center;
 }
-footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:40px;
-    width:100%;
-    background:#999;
-    padding: 10px;
-    margin-bottom: 10px;
-}
+
 .box{
   position:absolute;
   height:100%;
@@ -41,6 +32,7 @@ footer {
   color:#fff;
   border:0;
 }
+
 .login {
     width:400px;
     height:400px;
@@ -55,6 +47,13 @@ footer {
     overflow:hidden;
 }
 
-
-
-
+input[type="submit"]{
+    margin-bottom: auto;
+    background:rgba(0, 0, 0, 0.658);
+    color: #fff;
+    border: none;
+}
+input[type="submit"]:hover{
+    background: #16083b;
+    cursor: pointer;
+}
