@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Heladeria Venecia♪</title>
+    <title>Heladeria Venecia ♪ Sabor</title>
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/estilo_reg_emp.css">    
+    <link rel="stylesheet" href="../css/main_principal.css">    
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
 </head>
 <body>
@@ -14,7 +14,8 @@
     <header>
         <div class="contenedor">
             <h1 class="icon-guidedo"><a class="aaa" href="../index.html"><img src="../img/helado-icon.png" alt="" width="30px"></a><a class="aaa" href="principal.html">Venecia</a></h1>
-            &nbsp;<a class="aaa" href="principal.html">'Administrador'</a>            
+            &nbsp;
+            <a class="aaa" href="principal.html">'Administrador'</a>
             <input type="checkbox" id="menu-bar">
             <label class="icon-menu" for="menu-bar"></label>
             <nav class="menu">
@@ -31,26 +32,32 @@
             </nav>
         </div>
     </header>
-    
-	<form action="../php/registro_empleado.php" method="post" class="form-register" onSubmit="return validar();">
-		<h2 class="form_titulo">Datos de nuevo empleado</h2>
 
-		<div class="contenedor_inputs">
-			<!--<input type="text" id="codigo" name="codigo" placeholder="Codigo" class="input-100">-->
-			<input type="text" id="nombre" name="nombre" class="input-48" placeholder="Nombre">
-			<input type="text" id="apellido" name="apellido" placeholder="Apellidos"
-			class="input-48">
-			<input type="text" id="dni" name="dni" placeholder="DNI" class="input-48">
-			<input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48">
-			<input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" class="input-48">
-			<input type="text" id="celular" name="celular" placeholder="Celular" class="input-48">
-			<input type="text" id="direccion" name="direccion" placeholder="Direccion" class="input-100">
-			
-			<input type="submit"  name="submit" value="Registar" class="btn-enviar">
-			
-		</div>
-    </form>
-    
+    <!--main-->
+    <div class="main">
+        <div class="Caja">
+                <div class="login">
+                    <form action="php/sesion_validar.php" method="post">
+                        <div class="box">
+                            <h2>Nuevo Sabor - Carta</h2>
+
+                            <label for="cod_carta">Código:</label>
+                            <input type="text" id="cod_carta" placeholder="Código Carta">                            
+                            <label for="nombre">Sabor:</label>
+                            <input type="text" id="nombre" placeholder="Sabor de helado"> 
+                            <label for="precio">Precio:</label>
+                            <input type="text" id="precio" placeholder="Precio">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="text" id="cantidad" placeholder="Cantidad">
+                            <input type="submit">
+             
+                        </div>
+                    </form>
+                </div> 
+            </div>
+    </div>
+    <!--fin main-->
+
     <footer>
         <div class="contenedor">
             <p class="copy">Venecia &copy; 2017</p>
@@ -64,7 +71,5 @@
         </div>
     </footer>
 
-
-    <script type="text/javascript" src="../js/validar_reg_emp.js"></script>
 </body>
 </html>

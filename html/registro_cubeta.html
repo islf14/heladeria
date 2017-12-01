@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/estilo_reg_emp.css">    
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
+    <link rel="stylesheet" href="../css/estilo_reg_emp.css">        
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.icon">        
 </head>
 <body>
 
@@ -31,26 +31,19 @@
             </nav>
         </div>
     </header>
-    
-	<form action="../php/registro_empleado.php" method="post" class="form-register" onSubmit="return validar();">
-		<h2 class="form_titulo">Datos de nuevo empleado</h2>
 
+	<form action="../php/registro_cubeta.php" method="post" class="form-register" onSubmit="return validar();">
+		<h2 class="form_titulo">Nuevo sabor de cubeta</h2>
 		<div class="contenedor_inputs">
 			<!--<input type="text" id="codigo" name="codigo" placeholder="Codigo" class="input-100">-->
-			<input type="text" id="nombre" name="nombre" class="input-48" placeholder="Nombre">
-			<input type="text" id="apellido" name="apellido" placeholder="Apellidos"
-			class="input-48">
-			<input type="text" id="dni" name="dni" placeholder="DNI" class="input-48">
-			<input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48">
-			<input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" class="input-48">
-			<input type="text" id="celular" name="celular" placeholder="Celular" class="input-48">
-			<input type="text" id="direccion" name="direccion" placeholder="Direccion" class="input-100">
-			
+			<input type="text" id="codigo" name="codigo" class="input-100" placeholder="Codigo">
+			<input type="text" id="sabor" name="sabor" placeholder="Sabor" class="input-100">
+			<input type="text" id="cantidad" name="cantidad" placeholder="Cantidad" class="input-100">
 			<input type="submit"  name="submit" value="Registar" class="btn-enviar">
-			
 		</div>
-    </form>
-    
+	</form>
+	<script type="text/javascript" src="validar-c.js"></script>
+
     <footer>
         <div class="contenedor">
             <p class="copy">Venecia &copy; 2017</p>
@@ -64,7 +57,5 @@
         </div>
     </footer>
 
-
-    <script type="text/javascript" src="../js/validar_reg_emp.js"></script>
 </body>
 </html>

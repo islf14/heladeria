@@ -14,7 +14,7 @@
     width:100%;
     font-family:Helvetica;
     color:#fff;
-    background:rgba(0,0,0,0.15);
+    background:rgba(0, 0, 0, 0.418);/*esta parte aumenta el color al fondo del form*/
     padding:20px 0px;
   }
   .box h2{
@@ -31,6 +31,13 @@
     color:#fff;
     border:0;
   }
+
+  .box label{
+      display: block;
+      width: 300px;
+      margin-left: 50px;
+  }
+
   
   .login {
       width:400px;
@@ -82,7 +89,7 @@ input, textarea {
 }
 
 input:focus{
-    border: 1px solid #c91212;
+    border: 1px solid #0000ff;/*cambia el color del borde de los campos*/
 }
 
 textarea {
