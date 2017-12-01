@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../css/estilo_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/main_principal.css">    
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">  
+    <?php include("../php/conexion.php");
+	$con= conectar();?>	      
 </head>
 <body>
 
@@ -24,7 +26,7 @@
                 <a href="adm_cubeta.html" onclick="activa()">Adm. Cubeta</a>
                 <a href="ingreso_envase.html" onclick="activa()">Ingr. Envases</a>
                 <a href="registro_cubeta.html" onclick="activa()">Nueva Cubeta</a>
-                <a href="nuevo_sabor.html" onclick="activa()">Nv. Sabor</a>
+                <a href="nuevo_sabor.php" onclick="activa()">Nv. Sabor</a>
                 <a href="../php/buscar_inv.php" onclick="activa()">bsc</a>
                 <a href="nuevo_cliente.html" onclick="activa()">Cliente</a>
                 <a href="registro_empleado.html" onclick="activa()">Empleado</a>
@@ -33,24 +35,30 @@
         </div>
     </header>
 
+    <?php    
+    $query = $con->query("SELECT IFNULL(MAX(CAST(cod_carta AS UNSIGNED)), 0)+1 codigoExterno FROM carta");
+    if($query->num_rows > 0){ 
+        while($row = $query->fetch_assoc()){ 
+            $postID = $row["codigoExterno"];
+        //echo "<script>alert('Código: $postID')</script>"; 					
+    }}
+    ?>
     <!--main-->
     <div class="main">
         <div class="Caja">
                 <div class="login">
-                    <form action="php/sesion_validar.php" method="post">
+                    <form action="../php/nuevo_sabor_validar.php" method="post">
                         <div class="box">
                             <h2>Nuevo Sabor - Carta</h2>
-
                             <label for="cod_carta">Código:</label>
-                            <input type="text" id="cod_carta" placeholder="Código Carta">                            
-                            <label for="nombre">Sabor:</label>
-                            <input type="text" id="nombre" placeholder="Sabor de helado"> 
+                            <input type="text" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
+                            <label for="sabor">Sabor:</label>
+                            <input type="text" id="sabor" placeholder="Sabor de helado"> 
                             <label for="precio">Precio:</label>
                             <input type="text" id="precio" placeholder="Precio">
                             <label for="cantidad">Cantidad:</label>
                             <input type="text" id="cantidad" placeholder="Cantidad">
-                            <input type="submit">
-             
+                            <input type="submit" name="submit">             
                         </div>
                     </form>
                 </div> 

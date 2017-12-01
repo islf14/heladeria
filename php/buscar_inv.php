@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="../css/est_bus.css">
     
     <link href="../css/estilo_reg_emp.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.csss">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
 </head>
@@ -100,7 +100,7 @@
 			<?
 				echo $mensaje;
 			?>
-		</section>
+	</section>
 
     <!--main-->
     <div class="mainn">
