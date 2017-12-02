@@ -7,6 +7,7 @@
 	$contrasena = $_POST['contrasena'];
 	$celular = $_POST['celular'];
 	$direccion = $_POST['direccion'];
+	echo '<script language="javascript">alert("nombre:'.$nombre.'");</script>';
 	}
 
 	include("conexion.php");

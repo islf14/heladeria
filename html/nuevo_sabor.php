@@ -53,12 +53,12 @@
                             <label for="cod_carta">Código:</label>
                             <input type="text" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
                             <label for="sabor">Sabor:</label>
-                            <input type="text" id="sabor" placeholder="Sabor de helado"> 
+                            <input type="text" id="sabor" name="sabor" placeholder="Sabor de helado"> 
                             <label for="precio">Precio:</label>
-                            <input type="text" id="precio" placeholder="Precio">
+                            <input type="text" id="precio" name="precio" placeholder="Precio">
                             <label for="cantidad">Cantidad:</label>
-                            <input type="text" id="cantidad" placeholder="Cantidad">
-                            <input type="submit" name="submit">             
+                            <input type="text" id="cantidad" name="cantidad" placeholder="Cantidad">
+                            <input type="submit" name="">             
                         </div>
                     </form>
                 </div> 

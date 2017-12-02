@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="../css/est_bus.css">
     
     <link href="../css/estilo_reg_emp.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.csss">
         
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
 </head>
@@ -53,7 +53,7 @@
 				<a href="../html/adm_cubeta.html" onclick="activa()">Adm. Cubeta</a>
 				<a href="../html/ingreso_envase.html" onclick="activa()">Ingr. Envases</a>
 				<a href="../html/registro_cubeta.html" onclick="activa()">Nueva Cubeta</a>
-				<a href="../html/nuevo_sabor.html" onclick="activa()">Nv. Sabor</a>
+				<a href="../html/nuevo_sabor.php" onclick="activa()">Nv. Sabor</a>
 				<a href="../php/buscar_inv.php" onclick="activa()">bsc</a>
 				<a href="../html/nuevo_cliente.html" onclick="activa()">Cliente</a>
 				<a href="../html/registro_empleado.html" onclick="activa()">Empleado</a>
