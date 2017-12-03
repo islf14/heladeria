@@ -5,16 +5,21 @@
 header label {
     float: right;
     font-size: 28px;
-    margin: 6px 0px;/*margin de boton menu*/
+    margin: 6px 0px;/*margin de botón menu*/
     cursor: pointer;
 }
-h1{
-    /*font-size: 20px;*/
-}
+
 .aaa {
     text-decoration: none;
     color: #fff;
+    font-size: 20px;
 }
+.adm{
+    text-decoration: none;
+    color: #ec5454;
+    font-size: 13px;
+}
+
 .menu{
     position: absolute;
     top: 50px;
@@ -26,15 +31,26 @@ h1{
     transform: translate(-100%);
 }
 
-.menu a {
+/*.menu a {*/
+.menu .dir {
     display: block;
     color: #fff;
     height: 50px;
     text-decoration: none;
-    padding-top: 8px;
-    padding: 7px; /*tamanio de padding*/
+    padding: 9px 6px; /*tamanio de padding, alto y ancho*/
     font-size: 15px;
     border-bottom: 1px solid rgba(1,255,255,0.3);    
+}
+
+.sel {
+    background: rgba(255, 255, 255, 0.556);
+    color: #35e5eb;
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    padding: 9px 6px; /*tamanio de padding, alto y ancho*/
+    font-size: 15px;
+    border-bottom: 1px solid rgba(1,255,255,0.3);   
 }
 
 .menu a:hover {

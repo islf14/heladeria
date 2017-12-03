@@ -1,0 +1,10 @@
+.sel {
+    background: rgba(255, 255, 255, 0.556);
+    color: #35e5eb;
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    padding: 9px 6px; /*tamanio de padding, alto y ancho*/
+    font-size: 15px;
+    border-bottom: 1px solid rgba(1,255,255,0.3);   
+}

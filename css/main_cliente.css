@@ -1,4 +1,5 @@
 .main{
+    /*fondo*/
     margin-top: 30px;
     height: 100%;
     padding:0;
@@ -9,6 +10,7 @@
     background-position: center;
 }
 .box{
+    /*controla el fondo y borde de form*/
     position:absolute;
     height:100%;
     width:100%;
@@ -16,7 +18,7 @@
     color:#fff;
     background:rgba(0, 0, 0, 0.418);/*esta parte aumenta el color al fondo del form*/
     padding:20px 0px;
-  }
+}
   .box h2{
     text-align:center;
     margin:10px 0;
@@ -31,17 +33,14 @@
     color:#fff;
     border:0;
   }
-
   .box label{
       display: block;
       width: 300px;
       margin-left: 50px;
-  }
-
-  
+  }  
   .login {
-      width:400px;
-      height:600px;
+      width:400px;/*ancho de form*/
+      height:800px;/*alto de form*/
       position:absolute;
       top:calc(50vh - 300px);
       left:calc(50vw - 200px);
@@ -50,7 +49,7 @@
   .Caja{
       position:relative;
       height:100vh;
-      overflow:hidden;
+      overflow:hidden;/*permite deslizar*/
   }
   
   input[type="submit"]{
@@ -63,31 +62,15 @@
       background: #16083b;
       cursor: pointer;
   }
-input, textarea {
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-}
-
 input:focus{
-    border: 1px solid #ff00d4;/*cambia el color del borde de los campos*/
+    border: 1px solid #00ff2a;/*cambia el color del borde de los campos*/
 }
-
-textarea {
-    resize: vertical;
-    min-height: 50px;
-    max-height: 200px;
-}
-
 input[type="submit"]{
     margin-bottom: auto;
     background: #1668C4;
     color: #fff;
     border: none;
 }
-
 input[type="submit"]:hover{
     background: #4110c6;
     cursor: pointer;

@@ -15,22 +15,22 @@
 
     <header>
         <div class="contenedor">
-            <h1 class="icon-guidedo"><a class="aaa" href="../index.html"><img src="../img/helado-icon.png" alt="" width="30px"></a><a class="aaa" href="principal.html">Venecia</a></h1>
-            &nbsp;
-            <a class="aaa" href="principal.html">'Administrador'</a>
+        <h1 class="icon-guidedo"><a class="aaa" href="../index.html"><img src="../img/helado-icon.png" alt="" width="30px"></a><a class="aaa" href="principal.html"> Venecia</a></h1>
+        &nbsp;
+        <a class="adm" href="principal.html">'Administrador'</a>
             <input type="checkbox" id="menu-bar">
             <label class="icon-menu" for="menu-bar"></label>
             <nav class="menu">
-                <a href="principal.html" onclick="activa()">Inicio</a>
-                <a href="venta.html" onclick="activa()">Venta</a>
-                <a href="adm_cubeta.html" onclick="activa()">Adm. Cubeta</a>
-                <a href="ingreso_envase.html" onclick="activa()">Ingr. Envases</a>
-                <a href="registro_cubeta.html" onclick="activa()">Nueva Cubeta</a>
-                <a href="nuevo_sabor.php" onclick="activa()">Nv. Sabor</a>
-                <a href="../php/buscar_inv.php" onclick="activa()">bsc</a>
-                <a href="nuevo_cliente.html" onclick="activa()">Cliente</a>
-                <a href="registro_empleado.html" onclick="activa()">Empleado</a>
-                <a href="../index.html" onclick="activa()">Cerrar Sesión</a>
+                <a class="dir" href="principal.html" onclick="activa()">Inicio</a>
+                <a class="dir" href="venta.html" onclick="activa()">Venta</a>
+                <a class="dir" href="adm_cubeta.html" onclick="activa()">Adm. Cubeta</a>
+                <a class="dir" href="ingreso_envase.html" onclick="activa()">Ingr. Envases</a>
+                <a class="dir" href="registro_cubeta.html" onclick="activa()">Nueva Cubeta</a>
+                <a class="sel" href="nuevo_sabor.php" onclick="activa()">Nv. Sabor</a>
+                <a class="dir" href="buscar_inv.php" onclick="activa()">bsc</a>
+                <a class="dir" href="nuevo_cliente.php" onclick="activa()">Cliente</a>
+                <a class="dir" href="registro_empleado.html" onclick="activa()">Empleado</a>
+                <a class="dir" href="../index.html" onclick="activa()">Cerrar Sesión</a>
             </nav>
         </div>
     </header>
@@ -47,17 +47,17 @@
     <div class="main">
         <div class="Caja">
                 <div class="login">
-                    <form action="../php/nuevo_sabor_validar.php" method="post">
+                    <form action="../php/nuevo_sabor_validar.php" method="POST">
                         <div class="box">
                             <h2>Nuevo Sabor - Carta</h2>
                             <label for="cod_carta">Código:</label>
-                            <input type="text" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
+                            <input type="number" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
                             <label for="sabor">Sabor:</label>
-                            <input type="text" id="sabor" name="sabor" placeholder="Sabor de helado"> 
+                            <input type="text" id="sabor" name="sabor" required placeholder="Sabor de helado"> 
                             <label for="precio">Precio:</label>
-                            <input type="text" id="precio" name="precio" placeholder="Precio">
+                            <input type="number" id="precio" name="precio" required placeholder="Precio">
                             <label for="cantidad">Cantidad:</label>
-                            <input type="text" id="cantidad" name="cantidad" placeholder="Cantidad">
+                            <input type="number" id="cantidad" name="cantidad" required value="0" placeholder="Cantidad">
                             <input type="submit" name="">             
                         </div>
                     </form>
