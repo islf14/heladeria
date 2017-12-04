@@ -10,7 +10,7 @@
 		$check_res=mysqli_num_rows($res);
 			if($check_res>0){
 				echo ' <script language="javascript">alert("Atención: Ya existe este cliente, no se puede registrar");</script> ';
-				echo "<script>location.href='../html/nuevo_sabor.php'</script>";
+				echo "<script>location.href='../html/nuevo_cliente.php'</script>";
 			}else{
                 $rr = $con->query("INSERT INTO cliente(nombre,apellido,dni,ruc) VALUES ('$nombre','$apellido','$dni','$ruc')");
                 if($rr==1){

@@ -45,28 +45,25 @@
     ?>
     <!--main-->
     <div class="main">
-        <div class="Caja">
-                <div class="login">
-                    <form action="../php/nuevo_cliente_validar.php" method="post">
-                        <div class="box">
-                            <h2>Datos de Cliente</h2>
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Nombres">
-                            <label for="apellido">Apellido:</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellidos">
-                            <label for="dni">Documento de Identidad:</label>
-                            <input type="text" id="dni" name="dni" placeholder="N° DNI">
-                            <label for="ruc">RUC:</label>
-                            <input type="text" id="ruc" name="ruc" placeholder="RUC (opcional)"> 
-                            <label for="codigo">Codigo generado:</label>
-                            <input type="nymber" id="codigo" readonly placeholder="Codigo" value="<?php echo $postID;?>"> 
-                            <input type="submit">
-             
-                        </div>
-                    </form>
-                </div> 
-            </div>
-    </div>
+        <div class="formulario">
+            <form action="../php/nuevo_cliente_validar.php" method="post">
+                <div class="box">
+                    <h2>Datos de Cliente</h2>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Nombres">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Apellidos">
+                    <label for="dni">Documento de Identidad:</label>
+                    <input type="text" id="dni" name="dni" required placeholder="N° DNI">
+                    <label for="ruc">RUC:</label>
+                    <input type="text" id="ruc" name="ruc" placeholder="RUC (opcional)"> 
+                    <label for="codigo">Codigo generado:</label>
+                    <input type="nymber" id="codigo" readonly placeholder="Codigo" value="<?php echo $postID;?>"> 
+                    <input type="submit">
+                </div>
+            </form>
+        </div> 
+    </div>    
     <!--fin main-->
 
     <footer>

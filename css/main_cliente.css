@@ -1,77 +1,57 @@
-.main{
-    /*fondo*/
-    margin-top: 30px;
-    height: 100%;
-    padding:0;
-    margin:00;
-    background: url("../img/1.jpg");
-    background-repeat: no-repeat;
+body{
+    background-image: url(../img/3.jpg);
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
+    background-size: cover;
+}
+.formulario {
+    margin: auto;  
+    padding: 0px;
+    background:rgba(0, 0, 0, 0.527);
+    /*esta parte aumenta el color al fondo del form*/    
+    width:400px;
+    margin-top: 60px;    
+    margin-bottom:60px;
+    height: auto;
 }
 .box{
-    /*controla el fondo y borde de form*/
-    position:absolute;
-    height:100%;
-    width:100%;
+    margin:auto;
+    width: 100%;
     font-family:Helvetica;
     color:#fff;
-    background:rgba(0, 0, 0, 0.418);/*esta parte aumenta el color al fondo del form*/
-    padding:20px 0px;
+    padding: 10px 40px;/*alto - ancho*/
+    box-sizing: border-box;
 }
-  .box h2{
+.box h2{
     text-align:center;
-    margin:10px 0;
+    margin:0px 0px;/*alto - ancho*/
     font-size:30px;
-  }
-  .box input, .box textarea{
+    padding: 0px;
+}
+.box input{
     display:block;
-    width:300px;
-    margin:20px auto;
+    width:100%;
+    margin-bottom:10px;/*alto - ancho*/
     padding:15px;
-    background:rgba(0,0,0,0.5);
+    background:rgba(0, 0, 0, 0.589);
     color:#fff;
     border:0;
-  }
-  .box label{
-      display: block;
-      width: 300px;
-      margin-left: 50px;
-  }  
-  .login {
-      width:400px;/*ancho de form*/
-      height:800px;/*alto de form*/
-      position:absolute;
-      top:calc(50vh - 300px);
-      left:calc(50vw - 200px);
-      overflow:hidden;
-  }
-  .Caja{
-      position:relative;
-      height:100vh;
-      overflow:hidden;/*permite deslizar*/
-  }
-  
-  input[type="submit"]{
-      margin-bottom: auto;
-      background:rgba(0, 0, 0, 0.658);
-      color: #fff;
-      border: none;
-  }
-  input[type="submit"]:hover{
-      background: #16083b;
-      cursor: pointer;
-  }
-input:focus{
-    border: 1px solid #00ff2a;/*cambia el color del borde de los campos*/
 }
+.box label{
+    display: block;
+    width: 100%;
+    padding:15px;
+}  
 input[type="submit"]{
-    margin-bottom: auto;
-    background: #1668C4;
+    margin-top: 20px;
+    background: rgba(22, 106, 196, 0.651);
     color: #fff;
     border: none;
 }
 input[type="submit"]:hover{
-    background: #4110c6;
+    background: hsla(256, 85%, 42%, 0.733);
     cursor: pointer;
+}
+input:focus{
+    border: 1px solid #00ff2a;/*cambia el color del borde de los campos*/
 }

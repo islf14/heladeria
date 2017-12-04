@@ -45,24 +45,22 @@
     ?>
     <!--main-->
     <div class="main">
-        <div class="Caja">
-                <div class="login">
-                    <form action="../php/nuevo_sabor_validar.php" method="POST">
-                        <div class="box">
-                            <h2>Nuevo Sabor - Carta</h2>
-                            <label for="cod_carta">Código:</label>
-                            <input type="number" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
-                            <label for="sabor">Sabor:</label>
-                            <input type="text" id="sabor" name="sabor" required placeholder="Sabor de helado"> 
-                            <label for="precio">Precio:</label>
-                            <input type="number" id="precio" name="precio" required placeholder="Precio">
-                            <label for="cantidad">Cantidad:</label>
-                            <input type="number" id="cantidad" name="cantidad" required value="0" placeholder="Cantidad">
-                            <input type="submit" name="">             
-                        </div>
-                    </form>
-                </div> 
-            </div>
+            <div class="formulario">
+                <form action="../php/nuevo_sabor_validar.php" method="POST">
+                    <div class="box">
+                        <h2>Nuevo Sabor - Carta</h2>
+                        <label for="cod_carta">Código:</label>
+                        <input type="number" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
+                        <label for="sabor">Sabor:</label>
+                        <input type="text" id="sabor" name="sabor" required placeholder="Sabor de helado"> 
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" name="precio" required placeholder="Precio">
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" id="cantidad" name="cantidad" required value="0" placeholder="Cantidad">
+                        <input type="submit" name="">             
+                    </div>
+                </form>
+            </div> 
     </div>
     <!--fin main-->
 
