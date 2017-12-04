@@ -23,7 +23,7 @@ main{
     width:400px;
     height:400px;
     position:relative;
-    top:calc(50vh - 300px);/*a media pantalla le resta*/
+    top:calc(50vh - 250px);/*a media pantalla le resta*/
     left:calc(50vw - 200px);
     overflow:hidden;
 }

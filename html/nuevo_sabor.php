@@ -22,14 +22,14 @@
             <label class="icon-menu" for="menu-bar"></label>
             <nav class="menu">
                 <a class="dir" href="principal.html" onclick="activa()">Inicio</a>
-                <a class="dir" href="venta.html" onclick="activa()">Venta</a>
-                <a class="dir" href="adm_cubeta.html" onclick="activa()">Adm. Cubeta</a>
-                <a class="dir" href="ingreso_envase.html" onclick="activa()">Ingr. Envases</a>
-                <a class="dir" href="registro_cubeta.html" onclick="activa()">Nueva Cubeta</a>
-                <a class="sel" href="nuevo_sabor.php" onclick="activa()">Nv. Sabor</a>
+                <a class="dir" href="venta.php" onclick="activa()">Venta</a>
+                <a class="dir" href="adm_cubeta.php" onclick="activa()">Adm. Cubeta</a>
+                <a class="dir" href="ingreso_envase.php" onclick="activa()">Ingr. Envase</a>
+                <a class="dir" href="registro_cubeta.php" onclick="activa()">Nueva Cubeta</a>
+                <a class="sel" href="nuevo_sabor.php" onclick="activa()">Nueva Carta</a>
                 <a class="dir" href="buscar_inv.php" onclick="activa()">bsc</a>
                 <a class="dir" href="nuevo_cliente.php" onclick="activa()">Cliente</a>
-                <a class="dir" href="registro_empleado.html" onclick="activa()">Empleado</a>
+                <a class="dir" href="registro_empleado.php" onclick="activa()">Empleado</a>
                 <a class="dir" href="../index.html" onclick="activa()">Cerrar Sesión</a>
             </nav>
         </div>
@@ -48,13 +48,13 @@
             <div class="formulario">
                 <form action="../php/nuevo_sabor_validar.php" method="POST">
                     <div class="box">
-                        <h2>Nuevo Sabor - Carta</h2>
+                        <h2>Nuevo - Carta</h2>
                         <label for="cod_carta">Código:</label>
                         <input type="number" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
-                        <label for="sabor">Sabor:</label>
+                        <label for="sabor">Nombre:</label>
                         <input type="text" id="sabor" name="sabor" required placeholder="Sabor de helado"> 
                         <label for="precio">Precio:</label>
-                        <input type="number" id="precio" name="precio" required placeholder="Precio">
+                        <input type="text" id="precio" name="precio" required placeholder="Precio">
                         <label for="cantidad">Cantidad:</label>
                         <input type="number" id="cantidad" name="cantidad" required value="0" placeholder="Cantidad">
                         <input type="submit" name="">             
