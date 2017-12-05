@@ -51,7 +51,7 @@
                 <label for="codigo">Código generado:</label>
                 <input type="number" id="codigo" name="codigo" class="input-100" readonly placeholder="Codigo" value="<?php echo $postID;?>">
                 <input type="text" id="sabor" name="sabor" placeholder="Sabor" class="input-100">
-                <input type="text" id="cantidad" name="cantidad" placeholder="Cantidad" class="input-100">
+                <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" class="input-100" value="0">
                 <input type="submit"  name="submit" value="Registar" class="btn-enviar">
             </div>
         </form>

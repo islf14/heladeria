@@ -62,7 +62,7 @@
                             while ( $row = mysqli_fetch_array($result) )    
                             {
                         ?>
-                        <option value="<?php echo $row['cod_emp'] ?> " ><?php echo $row['nombre']; ?></option>
+                        <option value="<?php echo $row['cod_emp'] ?> " ><?php echo $row['nombre']." ".$row['apellido']; ?></option>
                         <?php
                             }    
                         ?>        
