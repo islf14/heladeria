@@ -26,7 +26,7 @@ body{
     text-align:center;
     font-size:30px;
 }
-.box input, .box textarea{
+.box input, .box textarea, .box select{
     display:block;
     width:100%;
     margin-bottom: 10px;

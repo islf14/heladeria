@@ -45,33 +45,76 @@
     ?>
     <!--main-->
     <div class="main">
-            <div class="formulario">
-                <form action="../php/venta_validar.php" method="post">
-                    <div class="box">
-                        <h2>Registro de Venta</h2>
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">  
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">
-                        <label for="codigo">Codigo Generado:</label>
-                        <input type="number" id="codigo" neme="codigo" placeholder="Código">                          
-                        
-                        <input type="submit">
-                    </div>
-                </form>
-            </div> 
+        <div class="formulario">
+            <form action="../php/venta_validar.php" method="post">
+                <div class="box">
+                    <h2>Registro de Venta</h2>
+                    <label for="codigo">Codigo Generado:</label>
+                    <input type="number" id="codigo" neme="codigo" value="<?php echo $postID;?>" readonly placeholder="Código">
+                    <label for="empleado">Empleado:</label>
+                    <?php
+                        $query = 'SELECT * FROM empleado';
+                        $result = $con->query($query);
+                    ?>
+                    <select name="empleado" id="empleado">
+                        <option value="0">Seleccione empleado</option>
+                        <?php    
+                            while ( $row = mysqli_fetch_array($result) )    
+                            {
+                        ?>
+                        <option value="<?php echo $row['cod_emp'] ?> " ><?php echo $row['nombre']; ?></option>
+                        <?php
+                            }    
+                        ?>        
+                    </select>
+                    
+                    <label for="cod_carta">Carta:</label>
+                    <?php
+                        $query = 'SELECT * FROM carta';
+                        $result = $con->query($query);
+                    ?>
+                    <select name="cod_carta" id="cod_carta">
+                        <option value="0">Seleccione Carta</option>
+                        <?php    
+                            while ( $row = mysqli_fetch_array($result) )    
+                            {
+                        ?>
+                        <option value="<?php echo $row['cod_carta'] ?> " ><?php echo $row['nombre_carta']; ?></option>
+                        <?php
+                            }    
+                        ?>        
+                    </select>
+
+                    <label for="cliente">Cliente:</label>
+                    <?php
+                        $query = 'SELECT * FROM cliente';
+                        $result = $con->query($query);
+                    ?>
+                    <select name="cliente" id="cliente">
+                        <option value="0">Seleccione Cliente</option>
+                        <?php    
+                            while ( $row = mysqli_fetch_array($result) )    
+                            {
+                        ?>
+                        <option value="<?php echo $row['cod_cli'] ?> " ><?php echo $row['nombre']." ".$row['apellido']; ?></option>
+                        <?php
+                            }    
+                        ?>        
+                    </select>
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" neme="cantidad" value="00" placeholder="Cantidad">                    
+                    <label for="fecha">Fecha de venta</label>
+                    <input type="text" id="fecha" neme="fecha" placeholder="Fecha">
+                    <label for="sub_total">Sub Total:</label>
+                    <input type="number" id="sub_total" neme="sub_total" value="00" placeholder="SubTotal">
+                    <label for="igv">IGV:</label>
+                    <input type="number" id="igv" neme="igv" value="00" placeholder="IGV">
+                    <label for="neto">Total neto:</label>
+                    <input type="number" id="neto" neme="neto" value="00" placeholder="Código">
+                    <input type="submit">
+                </div>
+            </form>
+        </div> 
     </div>
     <!--fin main-->
 

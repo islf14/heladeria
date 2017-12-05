@@ -52,15 +52,43 @@
                     <label for="codigo">Codigo generado:</label>
                     <input type="number" id="codigo" name="codigo" readonly placeholder="Codigo generado" value="<?php echo $postID;?>">
                     <label for="empleado">Empleado:</label>
-                    <input type="number" id="empleado" name="empleado" required placeholder="Empleado">
-                    <label for="cod_inv">Codigo Inventario:</label>
-                    <input type="number" id="cod_inv" name="cod_inv" required placeholder="Codigo inventario">
+                    <?php
+                        $query = 'SELECT * FROM empleado';
+                        $result = $con->query($query);
+                    ?>
+                    <select name="empleado" id="empleado">
+                        <option value="0">Seleccione empleado</option>
+                        <?php    
+                            while ( $row = mysqli_fetch_array($result) )    
+                            {
+                        ?>
+                        <option value="<?php echo $row['cod_emp'] ?> " ><?php echo $row['nombre']; ?></option>
+                        <?php
+                            }    
+                        ?>        
+                    </select>
+                    <label for="cod_inv">Sabor en inventario:</label>
+                    <?php
+                        $query = 'SELECT * FROM inventario_cubeta';
+                        $result = $con->query($query);
+                    ?>
+                    <select name="cod_inv" id="cod_inv">
+                        <option value="0">Seleccione Sabor</option>
+                        <?php    
+                            while ( $row = mysqli_fetch_array($result) )    
+                            {
+                        ?>
+                        <option value="<?php echo $row['cod_inv'] ?> " ><?php echo $row['sabor']; ?></option>
+                        <?php
+                            }    
+                        ?>        
+                    </select>
                     <label for="fecha">Fecha:</label>
                     <input type="text" id="fecha" name="fecha" placeholder="Fecha">
                     <label for="ingreso">Cantidad de Ingreso:</label>
-                    <input type="number" id="ingreso" name="ingreso" required placeholder="Cantida de ingreso">
+                    <input type="number" id="ingreso" name="ingreso" value="00" required placeholder="Cantida de ingreso">
                     <label for="salida">Cantidad de Salida:</label>
-                    <input type="number" id="salida" name="salida" required placeholder="Cantidad de salida">                            
+                    <input type="number" id="salida" name="salida" value="00" required placeholder="Cantidad de salida">                            
                     <input type="submit">
                 </div>
             </form>

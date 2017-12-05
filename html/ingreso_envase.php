@@ -51,12 +51,43 @@
                     <h2>Ingreso de Envases</h2>
                     <label for="codigo">Codigo generado:</label>
                     <input type="number" id="codigo" name="codigo" readonly placeholder="Código generado" value="<?php echo $postID;?>">
+
                     <label for="empleado">Empleado:</label>
-                    <input type="text" id="empleado" name="empleado" required placeholder="Empleado">
-                    <label for="cod_carta">Codigo de carta:</label>
-                    <input type="number" id="cod_carta" name="cod_carta" required placeholder="Código de carta"> 
+                    <?php
+                        $query = 'SELECT * FROM empleado';
+                        $result = $con->query($query);
+                    ?>
+                    <select name="empleado" id="empleado">
+                        <option value="0">Seleccione empleado</option>
+                        <?php    
+                            while ( $row = mysqli_fetch_array($result) )    
+                            {
+                        ?>
+                        <option value="<?php echo $row['cod_emp'] ?> " ><?php echo $row['nombre']; ?></option>
+                        <?php
+                            }    
+                        ?>        
+                    </select>
+
+                    <label for="cod_carta">Carta:</label>
+                    <?php
+                        $query = 'SELECT * FROM carta';
+                        $result = $con->query($query);
+                    ?>
+                    <select name="cod_carta" id="cod_carta">
+                        <option value="0">Seleccione carta</option>
+                        <?php    
+                            while ( $row = mysqli_fetch_array($result) )    
+                            {
+                        ?>
+                        <option value="<?php echo $row['cod_carta'] ?> " ><?php echo $row['nombre_carta']; ?></option>
+                        <?php
+                            }    
+                        ?>        
+                    </select>
+
                     <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad" required placeholder="Cantidad"> 
+                    <input type="number" id="cantidad" name="cantidad" value="0" required placeholder="Cantidad"> 
                     <input type="submit">
                 </div>
             </form>

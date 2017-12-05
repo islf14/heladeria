@@ -1,6 +1,6 @@
 <?php
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		$nobre = $_POST['nombre'];//validacion de cliente
+		$nombre = $_POST['nombre'];//validacion de cliente
 		$apellido = $_POST['apellido'];
         $dni = $_POST['dni'];
         $ruc = $_POST['ruc'];        

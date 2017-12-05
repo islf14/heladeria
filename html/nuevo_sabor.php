@@ -52,7 +52,7 @@
                         <label for="cod_carta">Código:</label>
                         <input type="number" id="cod_carta" readonly value="<?php echo $postID;?>" placeholder="Código Carta">                            
                         <label for="sabor">Nombre:</label>
-                        <input type="text" id="sabor" name="sabor" required placeholder="Sabor de helado"> 
+                        <input type="text" id="sabor" name="sabor" required placeholder="Nombre de nueva carta"> 
                         <label for="precio">Precio:</label>
                         <input type="text" id="precio" name="precio" required placeholder="Precio">
                         <label for="cantidad">Cantidad:</label>
