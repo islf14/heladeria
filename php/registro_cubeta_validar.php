@@ -12,12 +12,16 @@
 		
 			if($check_mail>0){
 				echo ' <script language="javascript">alert("Atencion, ya existe el sabor, Ingrese otro");</script> ';
+				echo "<script>location.href='../html/registro_cubeta.php'</script>";
 			}else{		
-				$con->query("INSERT INTO inventario_cubeta(sabor,cantidad) VALUES ('$sabor','$cantidad')");
+				$ree = $con->query("INSERT INTO inventario_cubeta(sabor,cantidad) VALUES ('$sabor','$cantidad')");
 				//echo 'Se ha registrado con exito';
-				echo ' <script language="javascript">alert("Registrado con éxito");</script> ';
+				if($ree==1)
+					echo ' <script language="javascript">alert("Cubeta registrada con éxito");</script> ';
+				else
+					echo ' <script language="javascript">alert("Error registrando");</script> ';
 				$con->close();
-				echo "<script>location.href='../html/principal.html'</script>";
+				echo "<script>location.href='../html/registro_cubeta.php'</script>";
 			}			
 		
 

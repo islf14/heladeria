@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../css/estilo_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/estilo_reg_emp.css">        
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.icon">        
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.icon">   
+    <?php include("../php/conexion.php");
+	$con= conectar();?>	      
 </head>
 <body>
 
@@ -32,17 +34,29 @@
             </nav>
         </div>
     </header>
-
-	<form action="../php/registro_cubeta.php" method="post" class="form-register" onSubmit="return validar();">
-		<h2 class="form_titulo">Nuevo sabor de cubeta</h2>
-		<div class="contenedor_inputs">
-			<!--<input type="text" id="codigo" name="codigo" placeholder="Codigo" class="input-100">-->
-			<input type="text" id="codigo" name="codigo" class="input-100" placeholder="Codigo">
-			<input type="text" id="sabor" name="sabor" placeholder="Sabor" class="input-100">
-			<input type="text" id="cantidad" name="cantidad" placeholder="Cantidad" class="input-100">
-			<input type="submit"  name="submit" value="Registar" class="btn-enviar">
-		</div>
-	</form>
+    
+    <?php    
+    $query = $con->query("SELECT IFNULL(MAX(CAST(cod_inv AS UNSIGNED)), 0)+1 codigoExterno FROM inventario_cubeta");
+    if($query->num_rows > 0){ 
+        while($row = $query->fetch_assoc()){ 
+            $postID = $row["codigoExterno"];
+        //echo "<script>alert('Código: $postID')</script>"; 					
+    }}
+    ?>
+    <div class="formulario">
+        <form action="../php/registro_cubeta_validar.php" method="post" class="form-register" onSubmit="return validar();">
+            <h2 class="form_titulo">Nuevo sabor de cubeta</h2>
+            <div class="contenedor_inputs">
+                <!--<input type="text" id="codigo" name="codigo" placeholder="Codigo" class="input-100">-->
+                <label for="codigo">Código generado:</label>
+                <input type="number" id="codigo" name="codigo" class="input-100" readonly placeholder="Codigo" value="<?php echo $postID;?>">
+                <input type="text" id="sabor" name="sabor" placeholder="Sabor" class="input-100">
+                <input type="text" id="cantidad" name="cantidad" placeholder="Cantidad" class="input-100">
+                <input type="submit"  name="submit" value="Registar" class="btn-enviar">
+            </div>
+        </form>
+    </div>
+	
 	<script type="text/javascript" src="validar-c.js"></script>
 
     <footer>

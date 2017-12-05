@@ -32,26 +32,23 @@
             </nav>
         </div>
     </header>
-    
-	<form action="../php/registro_empleado.php" method="post" class="form-register" onSubmit="return validar();">
-		<h2 class="form_titulo">Datos de nuevo empleado</h2>
-
-		<div class="contenedor_inputs">
-			<!--<input type="text" id="codigo" name="codigo" placeholder="Codigo" class="input-100">-->
-			<input type="text" id="nombre" name="nombre" class="input-48" placeholder="Nombre">
-			<input type="text" id="apellido" name="apellido" placeholder="Apellidos"
-			class="input-48">
-			<input type="text" id="dni" name="dni" placeholder="DNI" class="input-48">
-			<input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48">
-			<input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" class="input-48">
-			<input type="text" id="celular" name="celular" placeholder="Celular" class="input-48">
-			<input type="text" id="direccion" name="direccion" placeholder="Direccion" class="input-100">
-			
-			<input type="submit"  name="submit" value="Registar" class="btn-enviar">
-			
-		</div>
-    </form>
-    
+    <div class="formulario">
+        <form action="../php/registro_empleado_validar.php" method="post" class="form-register" onSubmit="return validar();">
+            <h2 class="form_titulo">Datos de nuevo empleado</h2>
+            <div class="contenedor_inputs">
+                <!--<input type="text" id="codigo" name="codigo" placeholder="Codigo" class="input-100">-->
+                <input type="text" id="nombre" name="nombre" class="input-48" placeholder="Nombre">
+                <input type="text" id="apellido" name="apellido" placeholder="Apellidos" class="input-48">
+                <input type="text" id="dni" name="dni" placeholder="DNI" class="input-48">
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48">
+                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" class="input-48">
+                <input type="text" id="celular" name="celular" placeholder="Celular" class="input-48">
+                <input type="text" id="direccion" name="direccion" placeholder="Direccion" class="input-100">                
+                <input type="submit"  name="submit" value="Registar" class="btn-enviar">                
+            </div>
+        </form>
+    </div>
+	    
     <footer>
         <div class="contenedor">
             <p class="copy">Venecia &copy; 2017</p>
