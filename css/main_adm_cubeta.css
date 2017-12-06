@@ -1,0 +1,68 @@
+body{
+    background-image: url(../img/3.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.formulario {
+    margin: auto;  
+    padding: 0px;
+    background:rgba(0, 0, 0, 0.527);
+    /*esta parte aumenta el color al fondo del form*/    
+    width:400px;
+    margin-top: 60px;    
+    margin-bottom:60px;
+    height: auto;
+}
+.box{
+    margin:auto;
+    width: 100%;
+    font-family:Helvetica;
+    color:#fff;
+    padding: 10px 40px;/*alto - ancho*/
+    box-sizing: border-box;
+}
+.box h2{
+    text-align:center;
+    font-size:30px;
+}
+.box .input, .box textarea, .box select{
+    display:block;
+    width:100%;
+    margin-bottom: 10px;
+    padding:15px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    border:0;
+}
+.box .label{
+    display: block;
+    width:100% ;
+    padding:10px 0px;
+}
+.rad{
+    margin-top: 10px;
+}
+input[type="submit"]{
+    display:block;
+    width:100%;
+    margin-bottom: 10px;
+    padding:15px;    
+    border:0;
+    margin-top: 20px;
+    background: rgba(22, 106, 196, 0.651);
+    color: #fff;
+    border: none;
+}
+input[type="submit"]:hover{
+    background: hsla(256, 85%, 42%, 0.733);
+    cursor: pointer;
+}
+input:focus, .input:focus{
+    border: 1px solid #a200ff;/*cambia el color del borde de los campos*/
+}
+textarea {
+    resize: vertical;
+    min-height: 50px;
+    max-height: 200px;
+}

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/main_principal.css">    
+    <link rel="stylesheet" href="../css/main_adm_cubeta.css">    
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">
     <?php include("../php/conexion.php");
 	$con= conectar();?>	
@@ -49,9 +49,9 @@
             <form action="../php/adm_cubeta_validar.php" method="post">
                 <div class="box">
                     <h2>Ingreso-Salida de Cubetas</h2>
-                    <label for="codigo">Codigo generado:</label>
-                    <input type="number" id="codigo" name="codigo" readonly placeholder="Codigo generado" value="<?php echo $postID;?>">
-                    <label for="empleado">Empleado:</label>
+                    <label class="label" for="codigo">Codigo generado:</label>
+                    <input class="input" type="number" id="codigo" name="codigo" readonly placeholder="Codigo generado" value="<?php echo $postID;?>">
+                    <label class="label" for="empleado">Empleado:</label>
                     <?php
                         $query = 'SELECT * FROM empleado';
                         $result = $con->query($query);
@@ -67,7 +67,7 @@
                             }    
                         ?>        
                     </select>
-                    <label for="cod_inv">Sabor en inventario:</label>
+                    <label class="label" for="cod_inv">Sabor en inventario:</label>
                     <?php
                         $query = 'SELECT * FROM inventario_cubeta';
                         $result = $con->query($query);
@@ -83,12 +83,18 @@
                             }    
                         ?>        
                     </select>
-                    <label for="fecha">Fecha:</label>
-                    <input type="text" id="fecha" name="fecha" placeholder="Fecha">
-                    <label for="ingreso">Cantidad de Ingreso:</label>
-                    <input type="number" id="ingreso" name="ingreso" value="00" required placeholder="Cantida de ingreso">
-                    <label for="salida">Cantidad de Salida:</label>
-                    <input type="number" id="salida" name="salida" value="00" required placeholder="Cantidad de salida">                            
+                    <label class="label" for="fecha">Fecha:</label>
+                    <input class="input" type="text" id="fecha" name="fecha" placeholder="Fecha">
+                    <div class="rad">
+                        <label for="cantidad">Entrada:</label>
+                        <input type="radio" id="cantidad" name="cantidad" value=1 onchange='radio_c(this.value);'> &nbsp; &nbsp;
+                        <label for="cantidad">Salida:</label>
+                        <input type="radio" id="cantidad" name="cantidad" value=2 onchange='radio_c(this.value);'>
+                    </div>
+                    <label class="label" for="ingreso" id="label_cantidad">Cantidad de Ingreso:</label>
+                    <input class="input" type="number" id="ingreso" name="ingreso" value="00" required placeholder="Cantida de ingreso" disabled>
+                    <label class="label" for="salida">Cantidad de Salida:</label>
+                    <input class="input" type="number" id="salida" name="salida" value="00" required placeholder="Cantidad de salida" disabled>                            
                     <input type="submit">
                 </div>
             </form>
@@ -108,6 +114,6 @@
 
         </div>
     </footer>
-
+    <script type="text/javascript" src="../js/radio_ingreso.js"></script>
 </body>
 </html>

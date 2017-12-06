@@ -4,7 +4,7 @@
 		$empleado = $_POST['empleado'];//codigo de empleado que se cargo desde bd
         $cod_carta = $_POST['cod_carta'];/*se obtiene el cod de carta xD*/
 		$cantidad = $_POST['cantidad'];
-		//echo '<script language="javascript">alert("empleado: '.$empleado.', cod_carta: '.$cod_carta.'");</script> ';
+		//echo '<script language="javascript">alert("empleado: '.$empleado.'");</script> ';
 		include("conexion.php");
 		$con= conectar();
 		$res= $con->query("SELECT * FROM ingreso_carta WHERE cod_ing_carta='$codigo'");
@@ -14,18 +14,18 @@
 				echo "<script>location.href='../html/ingreso_envase.php'</script>";
 			}else{
                 $rr = $con->query("INSERT INTO ingreso_carta(empleado_cod_emp,carta_cod_cart,cantidad_ingresa) VALUES ('$empleado','$cod_carta','$cantidad')");
-                if($rr==1){
-					echo '<script language="javascript">alert("Registro exitoso 1");</script> ';					
-					$cant_bd = $con->query("SELECT cantidad FROM carta WHERE cod_carta=$cod_carta");
-					echo '<script language="javascript">alert("varlor de cant_bd: '.$cant_bd.'");</script> ';					
-					$upd=$con->qury("UPDATE carta SET cantidad = '$cant_bd+$cantidad' WHERE cod_carta = $cod_carta;");
-					echo '<script language="javascript">alert("valor upd: '.$upd.'");</script> ';
-					if($upd==1){
-						echo '<script language="javascript">alert("Registro exitoso 2");</script> ';
-					}
-                }else{
-                    echo ' <script language="javascript">alert("Error registrando");</script> ';
-                }
+                if($rr==1){				
+					$cons_cant = $con->query("SELECT cantidad FROM carta WHERE cod_carta=$cod_carta");
+					$row = mysqli_fetch_array($cons_cant);
+					$cant_bd=$row[0];
+					$new_cant = $cant_bd + $cantidad;
+					$upd = $con->query("UPDATE carta SET cantidad = '$new_cant' WHERE cod_carta = $cod_carta");
+					if($upd==1 && $rr==1)
+						echo '<script language="javascript">alert("Registro y actualización exitosa");</script> ';
+					else
+						echo '<script language="javascript">alert("error actualizando");</script> ';	
+                }else
+                    echo ' <script language="javascript">alert("Error registrando en Ingreso carta");</script> ';
                 $con->close();
                 echo "<script>location.href='../html/ingreso_envase.php'</script>";		
 			}
