@@ -58,13 +58,13 @@
                     ?>
                     <select name="empleado" id="empleado">
                         <option value="0">Seleccione empleado</option>
-                        <?php    
+                        <?php
                             while ( $row = mysqli_fetch_array($result) )    
                             {
                         ?>
                         <option value="<?php echo $row['cod_emp'] ?> " ><?php echo $row['nombre']." ".$row['apellido']; ?></option>
                         <?php
-                            }    
+                            }
                         ?>        
                     </select>
                     <label class="label" for="cod_inv">Sabor en inventario:</label>
@@ -74,27 +74,27 @@
                     ?>
                     <select name="cod_inv" id="cod_inv">
                         <option value="0">Seleccione Sabor</option>
-                        <?php    
+                        <?php
                             while ( $row = mysqli_fetch_array($result) )    
                             {
                         ?>
                         <option value="<?php echo $row['cod_inv'] ?> " ><?php echo $row['sabor']; ?></option>
                         <?php
-                            }    
+                            }
                         ?>        
                     </select>
                     <label class="label" for="fecha">Fecha:</label>
                     <input class="input" type="text" id="fecha" name="fecha" placeholder="Fecha">
                     <div class="rad">
-                        <label for="cantidad">Entrada:</label>
+                        <label for="cantidad1">Entrada:</label>
                         <input type="radio" id="cantidad" name="cantidad" value=1 onchange='radio_c(this.value);'> &nbsp; &nbsp;
-                        <label for="cantidad">Salida:</label>
+                        <label for="cantidad2">Salida:</label>
                         <input type="radio" id="cantidad" name="cantidad" value=2 onchange='radio_c(this.value);'>
                     </div>
                     <label class="label" for="ingreso" id="label_cantidad">Cantidad de Ingreso:</label>
-                    <input class="input" type="number" id="ingreso" name="ingreso" value="00" required placeholder="Cantida de ingreso" disabled>
+                    <input class="input" type="number" id="ingreso" name="ingreso" value="0" required placeholder="Cantida de ingreso" readonly>
                     <label class="label" for="salida">Cantidad de Salida:</label>
-                    <input class="input" type="number" id="salida" name="salida" value="00" required placeholder="Cantidad de salida" disabled>                            
+                    <input class="input" type="number" id="salida" name="salida" value="0" required placeholder="Cantidad de salida" readonly>                            
                     <input type="submit">
                 </div>
             </form>

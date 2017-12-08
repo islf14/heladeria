@@ -14,7 +14,7 @@
 				echo "<script>location.href='../html/ingreso_envase.php'</script>";
 			}else{
                 $rr = $con->query("INSERT INTO ingreso_carta(empleado_cod_emp,carta_cod_cart,cantidad_ingresa) VALUES ('$empleado','$cod_carta','$cantidad')");
-                if($rr==1){				
+                if($rr==1){
 					$cons_cant = $con->query("SELECT cantidad FROM carta WHERE cod_carta=$cod_carta");
 					$row = mysqli_fetch_array($cons_cant);
 					$cant_bd=$row[0];
