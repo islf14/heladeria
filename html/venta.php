@@ -50,7 +50,7 @@
                 <div class="box">
                     <h2>Registro de Venta</h2>
                     <label for="codigo">Codigo Generado:</label>
-                    <input type="number" id="codigo" neme="codigo" value="<?php echo $postID;?>" readonly placeholder="Código">
+                    <input type="number" id="codigo" name="codigo" value="<?php echo $postID;?>" readonly placeholder="Código">
                     <label for="empleado">Empleado:</label>
                     <?php
                         $query = 'SELECT * FROM empleado';
@@ -102,12 +102,12 @@
                         ?>        
                     </select>
                     <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" neme="cantidad" value="00" placeholder="Cantidad">                    
+                    <input type="number" id="cantidad" name="cantidad" required placeholder="Cantidad">                    
                     <label for="fecha">Fecha de venta</label>
-                    <input type="text" id="fecha" neme="fecha" placeholder="Fecha" required>
+                    <input type="text" id="fecha" name="fecha" placeholder="Fecha" required>
 
                     <label for="igv">IGV (%):</label>
-                    <input type="number" id="igv" neme="igv" value="19" placeholder="IGV">
+                    <input type="number" id="igv" name="igv" value="19" placeholder="IGV">
 
                     <input type="submit">
                 </div>

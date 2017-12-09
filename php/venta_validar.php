@@ -8,15 +8,18 @@
         $fecha = $_POST['fecha'];  
 		$igv=$_POST['igv'];
 		
-		echo '<script language="javascript">alert("codigo: '.$codigo.'; empleado : '.$empleado.'; cod carta : '.$cod_carta.'; cliente : '.$cliente.';  cantidad :'.$cantidad.'");</script> ';
+		echo '<script language="javascript">alert("codigo: '.$codigo.'; empleado : '.$empleado.'; cod carta :
+		 '.$cod_carta.'; cliente : '.$cliente.';  cantidad :'.$cantidad.'; fecha : '.$fecha.'");</script> ';
 
 		include("conexion.php");
 		$con= conectar();
 		$cons_cant = $con->query("SELECT precio FROM carta WHERE cod_carta=$cod_carta");
 		$row = mysqli_fetch_array($cons_cant);
 		$precio_carta=$row[0];
+		echo '<script language="javascript">alert("precio carta: '.$precio_carta.'");</script> ';
+
 		$total = $cantidad * $precio_carta;
-		$m_igv = $total * $igv;
+		$m_igv = $total * ($igv/100);
 		$subtotal = $total - $m_igv;
 		echo '<script language="javascript">alert("Subtotal: '.$subtotal.'; Monto Igv: '.$m_igv.'; Total Neto:'.$total.'");</script> ';
 		$res= $con->query("SELECT * FROM venta WHERE cod_venta='$codigo'");		
