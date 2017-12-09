@@ -104,13 +104,11 @@
                     <label for="cantidad">Cantidad:</label>
                     <input type="number" id="cantidad" neme="cantidad" value="00" placeholder="Cantidad">                    
                     <label for="fecha">Fecha de venta</label>
-                    <input type="text" id="fecha" neme="fecha" placeholder="Fecha">
-                    <label for="sub_total">Sub Total:</label>
-                    <input type="number" id="sub_total" neme="sub_total" value="00" placeholder="SubTotal">
-                    <label for="igv">IGV:</label>
-                    <input type="number" id="igv" neme="igv" value="00" placeholder="IGV">
-                    <label for="neto">Total neto:</label>
-                    <input type="number" id="neto" neme="neto" value="00" placeholder="Código">
+                    <input type="text" id="fecha" neme="fecha" placeholder="Fecha" required>
+
+                    <label for="igv">IGV (%):</label>
+                    <input type="number" id="igv" neme="igv" value="19" placeholder="IGV">
+
                     <input type="submit">
                 </div>
             </form>

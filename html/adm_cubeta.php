@@ -46,7 +46,7 @@
     <!--main-->
     <div class="main">
         <div class="formulario">
-            <form action="../php/adm_cubeta_validar.php" method="post">
+            <form name="form1" action="../php/adm_cubeta_validar.php" method="post" onSubmit="return validar_adm();" >
                 <div class="box">
                     <h2>Ingreso-Salida de Cubetas</h2>
                     <label class="label" for="codigo">Codigo generado:</label>
@@ -81,20 +81,18 @@
                         <option value="<?php echo $row['cod_inv'] ?> " ><?php echo $row['sabor']; ?></option>
                         <?php
                             }
-                        ?>        
+                        ?>
                     </select>
                     <label class="label" for="fecha">Fecha:</label>
                     <input class="input" type="text" id="fecha" name="fecha" placeholder="Fecha">
                     <div class="rad">
-                        <label for="cantidad1">Entrada:</label>
-                        <input type="radio" id="cantidad" name="cantidad" value=1 onchange='radio_c(this.value);'> &nbsp; &nbsp;
-                        <label for="cantidad2">Salida:</label>
-                        <input type="radio" id="cantidad" name="cantidad" value=2 onchange='radio_c(this.value);'>
+                        <label for="entrada">Entrada:</label>
+                        <input type="radio" id="entrada" name="radio1" value=1 onchange='radio_c(this.value);'> &nbsp; &nbsp;
+                        <label for="salida">Salida:</label>
+                        <input type="radio" id="salida" name="radio1" value=2 onchange='radio_c(this.value);'>
                     </div>
-                    <label class="label" for="ingreso" id="label_cantidad">Cantidad de Ingreso:</label>
-                    <input class="input" type="number" id="ingreso" name="ingreso" value="0" required placeholder="Cantida de ingreso" readonly>
-                    <label class="label" for="salida">Cantidad de Salida:</label>
-                    <input class="input" type="number" id="salida" name="salida" value="0" required placeholder="Cantidad de salida" readonly>                            
+                    <label class="label" for="cantidad" id="label_cantidad">Cantidad:</label>
+                    <input class="input" type="number" id="cantidad" name="cantidad" required placeholder="Ingrese cantidad" disabled>
                     <input type="submit">
                 </div>
             </form>
@@ -115,5 +113,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="../js/radio_ingreso.js"></script>
+    <script type="text/javascript" src="../js/validaciones.js"></script>
 </body>
 </html>

@@ -1,27 +1,39 @@
 <?php
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		$codigo = $_POST['codigo'];//validacion de cliente
+		$codigo = $_POST['codigo'];//validacion generado
 		$empleado = $_POST['empleado'];
-        $cod_inv = $_POST['cod_inv'];
+		$cod_carta = $_POST['cod_carta'];
+		$cliente = $_POST['cliente'];
+		$cantidad=$_POST['cantidad'];
         $fecha = $_POST['fecha'];  
-        $ingreso=$_POST['ingreso'];
-        $salida=$_POST['salida'];      
+		$igv=$_POST['igv'];
+		
+		echo '<script language="javascript">alert("codigo: '.$codigo.'; empleado : '.$empleado.'; cod carta : '.$cod_carta.'; cliente : '.$cliente.';  cantidad :'.$cantidad.'");</script> ';
+
 		include("conexion.php");
 		$con= conectar();
-		$res= $con->query("SELECT * FROM ingresocubeta WHERE cod_ing_cubeta='$codigo'");		
+		$cons_cant = $con->query("SELECT precio FROM carta WHERE cod_carta=$cod_carta");
+		$row = mysqli_fetch_array($cons_cant);
+		$precio_carta=$row[0];
+		$total = $cantidad * $precio_carta;
+		$m_igv = $total * $igv;
+		$subtotal = $total - $m_igv;
+		echo '<script language="javascript">alert("Subtotal: '.$subtotal.'; Monto Igv: '.$m_igv.'; Total Neto:'.$total.'");</script> ';
+		$res= $con->query("SELECT * FROM venta WHERE cod_venta='$codigo'");		
 		$check_res=mysqli_num_rows($res);
 			if($check_res>0){
 				echo ' <script language="javascript">alert("Atención: ERROR, ya existe ese registro");</script> ';
-				echo "<script>location.href='../html/adm_cubeta.php'</script>";
+				echo "<script>location.href='../html/venta.php'</script>";
 			}else{
-                $rr = $con->query("INSERT INTO ingreso_ceta(empleado_cod_emp,inventario_cod_inv,fecha,cantidad_ingreso,cantidad_salida) VALUES ('$empleado','$cod_inv','$fecha','$ingreso','$salida')");
+                $rr = $con->query("INSERT INTO venta(cod_venta, empleado_cod_emp, carta_cod_cart, cliente_cod_cli, cantidad, fecha_venta, subtotal, igv, total) 
+											VALUES (NULL, '$empleado', '$cod_carta', '$cliente', '$cantidad', '$fecha', '$subtotal', '$igv', '$total');");
                 if($rr==1){
                     echo ' <script language="javascript">alert("Registro exitoso");</script> ';
                 }else{
                     echo ' <script language="javascript">alert("Error registrando");</script> ';
                 }						
                 $con->close();
-                echo "<script>location.href='../html/adm_cubeta.php'</script>";		
+                echo "<script>location.href='../html/venta.php'</script>";		
 			}
 	}else{
 		echo "<script>location.href='../html/principal.html'</script>";
