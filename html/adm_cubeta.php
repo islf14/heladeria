@@ -5,6 +5,7 @@
     <title>Heladeria Venecia - Cubetas</title>
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
+    <link rel="stylesheet" href="../css/menu_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/main_adm_cubeta.css">    
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">
@@ -83,8 +84,9 @@
                             }
                         ?>
                     </select>
+                    <!--
                     <label class="label" for="fecha">Fecha:</label>
-                    <input class="input" type="text" id="fecha" name="fecha" placeholder="Fecha">
+                    <input class="input" type="text" id="fecha" name="fecha" placeholder="Fecha">-->
                     <div class="rad">
                         <label for="entrada">Entrada:</label>
                         <input type="radio" id="entrada" name="radio1" value=1 onchange='radio_c(this.value);'> &nbsp; &nbsp;

@@ -5,6 +5,7 @@
     <title>Heladeria Venecia - Venta</title>
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
+    <link rel="stylesheet" href="../css/menu_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/main_principal.css">    
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">
@@ -102,9 +103,10 @@
                         ?>        
                     </select>
                     <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad" required placeholder="Cantidad">                    
+                    <input type="number" id="cantidad" name="cantidad" required placeholder="Cantidad">
+                    <!--
                     <label for="fecha">Fecha de venta</label>
-                    <input type="text" id="fecha" name="fecha" placeholder="Fecha" required>
+                    <input type="date" id="fecha" name="fecha" placeholder="Fecha" required>-->
 
                     <label for="igv">IGV (%):</label>
                     <input type="number" id="igv" name="igv" value="19" placeholder="IGV">

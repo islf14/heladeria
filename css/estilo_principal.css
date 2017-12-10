@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans+Condensed:300|Oswald');
-@import url(menu_principal.css);
+/*@import url(menu_principal.css);
 /*@import url(main_principal.css);*/
 
 * {
@@ -16,7 +16,7 @@ body{
 header{
     width: 100%;
     height: 50px;
-    background: rgb(51, 1, 51);
+    /*background: rgb(51, 1, 51);*/
     color: #fff;
     
     position: fixed;

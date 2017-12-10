@@ -3,9 +3,13 @@
 		$codigo = $_POST['codigo'];//validacion de adm cubeta
 		$empleado = $_POST['empleado'];
         $cod_inv = $_POST['cod_inv'];
-        $fecha = $_POST['fecha'];  
+        //$fecha = $_POST['fecha'];  
 		$cantidad=$_POST['cantidad'];
 		$val_radio=$_POST['radio1'];
+		///////////obteniendo fecha del sistema
+		date_default_timezone_set("America/Lima");	
+		$fecha = date("Y-m-d H:i:s");
+		//////////////////
 		$ingreso = 0;
 		$salida = 0;
 		if($val_radio==1)
@@ -14,6 +18,7 @@
 			$salida = $cantidad;//resta
 		include("conexion.php");
 		$con= conectar();
+		//se consulta a la bd con la intension de saber si es posible la resta
 		$cons_cant = $con->query("SELECT cantidad FROM inventario_cubeta WHERE cod_inv=$cod_inv");
 		$row = mysqli_fetch_array($cons_cant);
 		$cant_bd=$row[0];

@@ -5,6 +5,7 @@
     <title>Heladeria Venecia - Envases</title>
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
+    <link rel="stylesheet" href="../css/menu_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/main_principal.css">    
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        

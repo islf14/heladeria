@@ -29,7 +29,8 @@
     <meta charset="UTF-8">
     <title>Heladeria Venecia♪</title>
     <link rel="stylesheet" href="../css/fontello.css">
-    <link rel="stylesheet" href="../css/estilo_principal.css">
+	<link rel="stylesheet" href="../css/estilo_principal.css">
+	<link rel="stylesheet" href="../css/menu_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/est_bus.css">
     

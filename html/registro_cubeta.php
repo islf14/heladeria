@@ -5,6 +5,7 @@
     <title>Heladeria Venecia♪</title>
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/estilo_principal.css">
+    <link rel="stylesheet" href="../css/menu_principal.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/estilo_reg_emp.css">        
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.icon">   
