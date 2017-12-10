@@ -7,13 +7,15 @@
 		//echo '<script language="javascript">alert("empleado: '.$empleado.'");</script> ';
 		include("conexion.php");
 		$con= conectar();
+		//consultando para ver si existe ese código
 		$res= $con->query("SELECT * FROM ingreso_carta WHERE cod_ing_carta='$codigo'");
 		$check_res=mysqli_num_rows($res);
 			if($check_res>0){
 				echo ' <script language="javascript">alert("Atención: ERROR, ya existe ese registro");</script> ';
 				echo "<script>location.href='../html/ingreso_envase.php'</script>";
 			}else{
-                $rr = $con->query("INSERT INTO ingreso_carta(empleado_cod_emp,carta_cod_cart,cantidad_ingresa) VALUES ('$empleado','$cod_carta','$cantidad')");
+                $rr = $con->query("INSERT INTO ingreso_carta(cod_ing_carta,empleado_cod_emp,carta_cod_cart,cantidad_ingresa)
+													 VALUES ('$codigo','$empleado','$cod_carta','$cantidad')");
                 if($rr==1){
 					$cons_cant = $con->query("SELECT cantidad FROM carta WHERE cod_carta=$cod_carta");
 					$row = mysqli_fetch_array($cons_cant);
@@ -23,7 +25,7 @@
 					if($upd==1 && $rr==1)
 						echo '<script language="javascript">alert("Registro y actualización exitosa");</script> ';
 					else
-						echo '<script language="javascript">alert("error actualizando");</script> ';	
+						echo '<script language="javascript">alert("Error actualizando");</script> ';	
                 }else
                     echo ' <script language="javascript">alert("Error registrando en Ingreso carta");</script> ';
                 $con->close();

@@ -22,7 +22,7 @@
 		$cons_cant = $con->query("SELECT cantidad FROM inventario_cubeta WHERE cod_inv=$cod_inv");
 		$row = mysqli_fetch_array($cons_cant);
 		$cant_bd=$row[0];
-		echo '<script language="javascript">alert("cantida bd: '.$cant_bd.'");</script> ';
+		//echo '<script language="javascript">alert("cantida bd: '.$cant_bd.'");</script> ';
 		if ($val_radio==2 && $cantidad > $cant_bd){
 			echo '<script language="javascript">alert("No se puede realizar operación, insuficientes recuros");</script> ';
 			$con->close();
@@ -35,8 +35,8 @@
 				echo ' <script language="javascript">alert("Atención: ERROR, ya existe ese registro");</script> ';
 				echo "<script>location.href='../html/adm_cubeta.php'</script>";
 			}else{
-				$rr = $con->query("INSERT INTO ingreso_cubeta(empleado_cod_emp,inventario_cod_inv,fecha,cantidad_ingreso,cantidad_salida)
-																	VALUES ('$empleado','$cod_inv','$fecha','$ingreso','$salida')");
+				$rr = $con->query("INSERT INTO ingreso_cubeta(cod_ing_cubeta,empleado_cod_emp,inventario_cod_inv,fecha,cantidad_ingreso,cantidad_salida)
+																	VALUES ('$codigo','$empleado','$cod_inv','$fecha','$ingreso','$salida')");
 				if($rr==1){
 					if($val_radio==1)
 					$new_cant = $cant_bd + $ingreso;

@@ -28,9 +28,9 @@
                 <a class="sel" href="ingreso_envase.php" onclick="activa()">Ingr. Envase</a>
                 <a class="dir" href="registro_cubeta.php" onclick="activa()">Nueva Cubeta</a>
                 <a class="dir" href="nuevo_sabor.php" onclick="activa()">Nueva Carta</a>
-                <a class="dir" href="buscar_inv.php" onclick="activa()">bsc</a>
                 <a class="dir" href="nuevo_cliente.php" onclick="activa()">Cliente</a>
                 <a class="dir" href="registro_empleado.php" onclick="activa()">Empleado</a>
+                <a class="dir" href="visualizar.php" onclick="activa()">Visualizar</a>
                 <a class="dir" href="../index.html" onclick="activa()">Cerrar Sesión</a>
             </nav>
         </div>

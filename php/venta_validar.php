@@ -10,7 +10,7 @@
 		$fecha = date("Y-m-d H:i:s");
 		$igv=$_POST['igv'];
 		//echo '<script language="javascript">alert("codigo: '.$codigo.'empleado : '.$empleado.'; cod carta: '.$cod_carta.'; cliente : '.$cliente.';  cantidad :'.$cantidad.'; fecha : '.$fecha.'");</script> ';
-		echo '<script language="javascript">alert("fecha: '.$fecha.'");</script>';
+		//echo '<script language="javascript">alert("fecha: '.$fecha.'");</script>';
 		include("conexion.php");
 		$con= conectar();
 		//se consulta a la bd con la intension de saber si es posible la resta
@@ -30,7 +30,7 @@
 			$total = $cantidad * $precio_carta;
 			$m_igv = $total * ($igv/100);
 			$subtotal = $total - $m_igv;
-			echo '<script language="javascript">alert("Subtotal: '.$subtotal.';  Monto Igv: '.$m_igv.';  Total Neto:'.$total.'");</script> ';
+			echo '<script language="javascript">alert("Subtotal: '.$subtotal.' ||  Monto Igv: '.$m_igv.' ||  Total Neto: '.$total.'")</script> ';
 			$res= $con->query("SELECT * FROM venta WHERE cod_venta='$codigo'");		
 			$check_res=mysqli_num_rows($res);
 				if($check_res>0){
