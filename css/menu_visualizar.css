@@ -45,8 +45,8 @@ header label {
 }
 
 .sel {
-    background: rgba(255, 255, 255, 0.556);
-    color: #35e5eb;
+    background: rgba(255, 255, 255, 0.392);
+    color: #47fff6;
     display: block;
     height: 50px;
     text-decoration: none;

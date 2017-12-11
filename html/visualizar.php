@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/menu_visualizar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/principal_est.css">
+    <link rel="stylesheet" href="../css/main_visualizar.css" >
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
 </head>
 <body>
@@ -21,12 +22,16 @@
     <!--main-->
 
     <div class="main">
-        <section id="cuerpo">
-            <h2>Visualizar</h2>
-            <p>Aqui podra visualizar los empleados, sabores de helado, clientes y otros que ya encuentren registrados.
-            </p>
-           
-        </section>
+        <div class="contenedor">
+            <div class="formulario">
+                <h2 class="titulo">Visualizar</h2>
+                <div class="table">
+                    <p class="table_row">Aqui podra visualizar los empleados, sabores de helado, clientes y otros que ya encuentren registrados.
+                    </p>
+                </div>
+            </div>
+        </div>
+       
     </div>
     <!--fin main-->
 

@@ -24,7 +24,7 @@
 		$cant_bd=$row[0];
 		//echo '<script language="javascript">alert("cantida bd: '.$cant_bd.'");</script> ';
 		if ($val_radio==2 && $cantidad > $cant_bd){
-			echo '<script language="javascript">alert("No se puede realizar operación, insuficientes recuros");</script> ';
+			echo '<script language="javascript">alert("ERROR: No se puede realizar operación, insuficientes recursos");</script> ';
 			$con->close();
 			echo "<script>location.href='../html/adm_cubeta.php'</script>";
 		}
@@ -46,9 +46,9 @@
 					if($upd==1 && $rr==1)
 						echo '<script language="javascript">alert("Felicidades: Registro y actualización exitosa");</script> ';
 					else
-						echo '<script language="javascript">alert("Error actualizando");</script> ';	
+						echo '<script language="javascript">alert("ERROR actualizando");</script> ';	
 				}else{
-					echo ' <script language="javascript">alert("Error registrando");</script> ';
+					echo ' <script language="javascript">alert("ERROR registrando");</script> ';
 				}						
 				$con->close();
 				echo "<script>location.href='../html/adm_cubeta.php'</script>";

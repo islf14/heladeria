@@ -6,13 +6,13 @@
     <label class="icon-menu" for="menu-bar"></label>
     <nav class="menu">
         <a class="sel" href="visualizar.php" onclick="activa()">Inicio</a>
-        <a class="dir" href="#.php" onclick="activa()">Clientes</a>
-        <a class="dir" href="#" onclick="activa()">Carta</a>
-        <a class="dir" href="buscar_inv.php" onclick="activa()">Cubetas</a>
-        <a class="dir" href="#" onclick="activa()">Tipo Carta</a>
-        <a class="dir" href="#" onclick="activa()">Tipo Cubeta</a>
-        <a class="dir" href="#" onclick="activa()">Ventas</a>
-        <a class="dir" href="#" onclick="activa()">Usuarios</a>
+        <a class="dir" href="vi_clientes.php" onclick="activa()">Clientes</a>
+        <a class="dir" href="vi_carta.php" onclick="activa()">Carta</a>
+        <a class="dir" href="vi_inventario.php" onclick="activa()">Cubetas</a>
+        <a class="dir" href="vi_adm_carta.php" onclick="activa()">Adm. Carta</a>
+        <a class="dir" href="vi_adm_cubeta.php" onclick="activa()">Adm. Cubeta</a>
+        <a class="dir" href="vi_ventas.php" onclick="activa()">Ventas</a>
+        <a class="dir" href="vi_empleados.php" onclick="activa()">Usuarios</a>
         <a class="dir" href="principal.html" onclick="activa()">Regresar</a>
         <a class="dir" href="../index.html" onclick="activa()">Cerrar Sesión</a>
     </nav>
