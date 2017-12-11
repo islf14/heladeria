@@ -9,6 +9,7 @@
 	if (isset($_POST['buscar']))
 	{
 		$sabor=$_POST['sabor'];
+		if($sabor!="")
 		$where="where sabor like '".$sabor."' ";		
 	}
 	/////////////////////// CONSULTA A LA BASE DE DATOS /////////////////////////
@@ -31,7 +32,7 @@
 	<link rel="stylesheet" href="../css/menu_visualizar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/est_bus.css">
-	<link rel="stylesheet" href="../css/estilo_reg_empp.css" >
+	<link rel="stylesheet" href="../css/estilo_bus_inv.css" >
 	<!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.icon">        
@@ -42,53 +43,44 @@
             include("header_visualizar.php");
         ?>
 	</header>
-	
-    <section class="main">
-			<form method="post">
-				<input type="text" placeholder="Escriba el sabor" name="sabor"/>
-				
-				<button name="buscar" type="submit">Buscar</button>
-			</form>
-			<!--<h3>Comensal</h3>-->
-			<?php
-				//$reg = $resAlumnos->fetch_array(MYSQLI_BOTH);
-				//$tarj=$reg['alumno_tarjeta'];
-				$sab=$sabor;
-				echo "Sabor: ".$sab;
-			?>
-			<table class="table">
-				<tr class="bg-primary">
-				
-					<th>Codigo</th>
-					<th>Sabor</th>
-					<th>Cantidad</th>
-					
-				</tr>				
-				<br><br>
-				<?php
-					while ($registroAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH))
-					{
-						echo'<tr>						
-							<td>'.$registroAlumnos['cod_inv'].'</td>
-							<td>'.$registroAlumnos['sabor'].'</td>
-							<td>'.$registroAlumnos['cantidad'].'</td>
-													 
-							</tr>';
-					}
-				?>
-			</table>
-			<?
-				echo $mensaje;
-			?>
-	</section>
-
     <!--main-->
-    <div class="mainn">
-        <div class="Cajaa">
-                <div class="loginn">
-                   
-                </div> 
-            </div>
+    <div class="main">
+        <div class="contenedor">
+			<div class="formulario">
+				<form method="post">
+					<input type="text" placeholder="Escriba el sabor" name="sabor"/>
+					<button name="buscar" type="submit" class="btn-enviar">Buscar</button>
+				</form>
+				<!--<h3>Comensal</h3>-->
+				<div class="mensaje">
+					<?php
+						//$reg = $resAlumnos->fetch_array(MYSQLI_BOTH);
+						//$tarj=$reg['alumno_tarjeta'];
+						$sab=$sabor;
+						echo "Sabor: ".$sab;
+					?>
+				</div>
+
+				<table class="table">
+					<tr class="table_title">					
+						<th>Codigo</th>
+						<th>Sabor</th>
+						<th>Cantidad</th>						
+					</tr>				
+					<br><br>
+					<?php
+						while ($registroAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH))
+						{
+							echo'<tr class="table_row">						
+								<td>'.$registroAlumnos['cod_inv'].'</td>
+								<td>'.$registroAlumnos['sabor'].'</td>
+								<td>'.$registroAlumnos['cantidad'].'</td>						
+								</tr>';
+						}
+					?>
+				</table>				
+			</div>
+		</div>
     </div>
     <!--fin main-->
 
