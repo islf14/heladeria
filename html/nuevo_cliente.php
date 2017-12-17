@@ -55,9 +55,9 @@
                     <label for="apellido">Apellido:</label>
                     <input type="text" id="apellido" name="apellido" required placeholder="Apellidos">
                     <label for="dni">Documento de Identidad:</label>
-                    <input type="text" id="dni" name="dni" required placeholder="N° DNI">
+                    <input type="text" id="dni" name="dni" placeholder="N° DNI (opcional)">
                     <label for="ruc">RUC:</label>
-                    <input type="text" id="ruc" name="ruc" placeholder="RUC (opcional)"> 
+                    <input type="text" id="ruc" name="ruc" placeholder=" N° RUC (opcional)"> 
                     <label for="codigo">Codigo generado:</label>
                     <input type="nymber" id="codigo" readonly placeholder="Codigo" value="<?php echo $postID;?>"> 
                     <input type="submit">

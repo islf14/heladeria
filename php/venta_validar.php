@@ -5,12 +5,9 @@
 		$cod_carta = $_POST['cod_carta'];
 		$cliente = $_POST['cliente'];
 		$cantidad=$_POST['cantidad'];/*cantidad a restar en bd*/
-		//$fecha = $_POST['fecha'];
 		date_default_timezone_set("America/Lima");	
-		$fecha = date("Y-m-d H:i:s");
+		$fecha = date("Y-m-d H:i:s");	//echo '<script language="javascript">alert("fecha: '.$fecha.'");</script>';
 		$igv=$_POST['igv'];
-		//echo '<script language="javascript">alert("codigo: '.$codigo.'empleado : '.$empleado.'; cod carta: '.$cod_carta.'; cliente : '.$cliente.';  cantidad :'.$cantidad.'; fecha : '.$fecha.'");</script> ';
-		//echo '<script language="javascript">alert("fecha: '.$fecha.'");</script>';
 		include("conexion.php");
 		$con= conectar();
 		//se consulta a la bd con la intension de saber si es posible la resta
@@ -18,15 +15,12 @@
 		$row = mysqli_fetch_array($cons_cant);
 		$precio_carta=$row[2];
 		$cant_bd=$row[3];
-		//echo '<script language="javascript">alert("cantidad en bd: '.$cant_bd.'");</script> ';
 		if ($cantidad > $cant_bd){
 			echo '<script language="javascript">alert("No se puede realizar operación, insuficientes envases");</script> ';
 			$con->close();
 			echo "<script>location.href='../html/venta.php'</script>";
 		}else{
-			//se ejecuta si hay todavia envases
-			//echo '<script language="javascript">alert("precio carta: '.$precio_carta.'");</script> ';
-			//hallando  los precios para la bd
+			//se ejecuta si hay todavia envases	//hallando  los precios para la bd
 			$total = $cantidad * $precio_carta;
 			$m_igv = $total * ($igv/100);
 			$subtotal = $total - $m_igv;

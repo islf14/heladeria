@@ -47,7 +47,7 @@
     <!--main-->
     <div class="main">
         <div class="formulario">
-            <form action="../php/venta_validar.php" method="post">
+            <form action="../php/venta_validar.php" method="post" onSubmit="return validar_venta();">
                 <div class="box">
                     <h2>Registro de Venta</h2>
                     <label for="codigo">Codigo Generado:</label>
@@ -130,6 +130,8 @@
 
         </div>
     </footer>
+
+    <script type="text/javascript" src="../js/validaciones.js"></script>
 
 </body>
 </html>
